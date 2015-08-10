@@ -18,6 +18,6 @@
 class autologout::no {
     case $::osfamily {
         'Darwin': { include autologout::no::darwin }
-        default:  { unimplemented() }
+        default:  { fail "unimplemented on ${::osfamily}" }
     }
 }
